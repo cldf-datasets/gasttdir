@@ -26,7 +26,10 @@ class Dataset(BaseDataset):
     id = "gasttdir"
 
     def cldf_specs(self):  # A dataset must declare all CLDF sets it creates.
-        return CLDFSpec(dir=self.cldf_dir, module="StructureDataset")
+        return CLDFSpec(
+            dir=self.cldf_dir,
+            module="StructureDataset",
+            metadata_fname='cldf-metadata.json')
 
     def cmd_download(self, args):
         """
