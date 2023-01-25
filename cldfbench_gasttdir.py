@@ -7,12 +7,13 @@ from cldfbench import CLDFSpec, Dataset as BaseDataset
 
 def html_cleanup(cell):
     cell = cell.strip()
-    cell = re.sub('<[^<>]*>', '', cell)
+    # TODO reenable html removal
+    #cell = re.sub('<[^<>]*>', '', cell)
+    #cell = cell.replace('&lt;', '<')
+    #cell = cell.replace('&gt;', '>')
     cell = re.sub('&nbsp;?', ' ', cell)
     # some remnant of a non-utf encoding???
     cell = re.sub('&#146;?', '’', cell)
-    cell = cell.replace('&lt;', '<')
-    cell = cell.replace('&gt;', '>')
     cell = cell.replace('&auml;', 'ä')
     cell = re.sub(r'&#(\d+);?', lambda m: chr(int(m.group(1))), cell)
     # why not..
