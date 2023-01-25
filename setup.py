@@ -12,7 +12,7 @@ setup(
         ]
     },
     install_requires=[
-        'cldfbench',
+        'cldfbench[glottolog,excel]',
     ],
     extras_require={
         'test': [

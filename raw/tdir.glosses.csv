@@ -1,0 +1,133 @@
+gloss,explanation
+1,first person
+2,second person
+3,third person
+A.A.,attributive first-third class singular
+ABS,absolutive
+ACC,accusative
+ADESS,adessive
+ADD,additive particle
+AGR,agreement-affix
+ANPH,anaphor
+AOR,aorist
+APPL,applicative
+ART,article
+ASP,aspect
+ATTR,attributive
+AUX,auxiliary
+CAUSE,causative
+CL,clitic
+COMP,complementizer
+COND,conditional
+CONTR,contrastive
+COP,copula
+DAT,dative
+DEF,definite
+DIFF.SBJ,different subject
+DIST,distal
+DUR,durative
+DUEX,dual exclusive
+DYN,dynamic
+ELA,elative case
+EMPH,emphatic
+ERG,ergative
+EXCL,exclusive
+FAM,familiar
+FEM,feminine
+FIN,finite
+FOC,focus
+FUT,future
+f.w.,field work
+GEN,genitive
+HAB,habitual
+HON,honorific
+IDEM,token identity
+ILL,illative case
+IMP,imperative
+IMPF,imperfective
+INA,inalienable
+IND,indicative
+INESS,inessive case
+INF,infinitive
+INFRML,informal
+INT,intensifier
+INSTR,instrumental
+LNK,linker
+LOC,locative
+MASC,masculine
+MID,middle
+MOD,modal
+NA,nominal article
+NC,nominal class marker
+NEG,negative
+NEUT,neuter
+NOM,nominative
+NP,noun phrase
+NPS,nominal possessor suffix
+OBJ,object
+OBL,oblique
+OM,object marker
+OPT,optative
+OV,objective version
+PART,participle
+p.c.,personal communication
+PFCT,perfect
+PL,plural
+POSS,possessive
+POSS.PRO,possessive pronoun
+POSTP,postposition
+POT,potential
+PREP,preposition
+PRET,preterite
+PREV,preverb
+PRO,free personal pronoun
+PRON-,bound personal pronoun
+PROX,proximal
+PRS,present
+PRT,particle
+PRTT,partitive
+PSM,possessum
+PSR,possessor
+PST,past
+PSV,passive
+Q(UEST),question
+REFL,reflexive
+RES,resultative
+RESTR,restrictive
+RLT,relational particle
+SG,singular
+SPE,specific
+SBJ,subject
+SUBJ,subjunctive
+SBJ.FOC,subject focus
+SUPERESS,superessive
+SV,subjective version
+TAM,tense aspect mood
+TOP,topic
+UNM,unmarked
+VERBNOM,deverbal nominalization
+WALS,Word Atlas of Language Structures
+,NULL
+DET,determiner
+DEM,demonstrative
+PRED,predicative (auxiliary)
+SOC,sociative
+ANT,anterior past
+CNT,continuative aspect
+ADJ,adjective/adjectival
+NNOM,non-nominative
+REL,relative marker (introduces relative clauses)
+BEN,benefactive
+INDEF,indefinite
+PROG,progressive aspect
+SUP,superlative
+INTR,intransitivizer
+ABL,ablative
+STAT,stative
+APP,appositive marker
+COL,column in a paradigm
+RSM,resumptive marker
+NAR,narrative past
+SBEL,subelative
+GD,gender
+NB,number
