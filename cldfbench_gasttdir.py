@@ -65,6 +65,7 @@ class Dataset(BaseDataset):
             {
                 'ID': '{}-{}'.format(value['sil'], param['ID']),
                 'Language_ID': value['sil'],
+                'Parameter_ID': param['ID'],
                 'Value': value[param['ID']].strip(),
             }
             for value in original_values
