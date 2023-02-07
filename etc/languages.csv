@@ -3,14 +3,14 @@ ABK,Abkhaz,Eurasia,43.056218,41.159115,abkh1244,abk,Abkhaz
 ALN,Albanian,Eurasia,,,alba1267,sqi,Albanian
 AMH,Amharic,Africa,11.708182,39.543456,amha1245,amh,Amharic
 ABV,Arabic,,,,arab1395,,Arabic
-ARM,Armenian,,,,,,Armenian
+ARM,Eastern Armenian,Eurasia,40.0,45.0,nucl1235,hye,Armenian
 KVA,Bagvalal,Eurasia,42.3966,46.1041,bagv1239,kva,Bagvalal
 BSQ,Basque,Eurasia,43.2787,-1.31622,basq1248,eus,Basque
 BNG,Bengali,Eurasia,24.0,90.0,beng1280,ben,Bengali
 BLG,Bulgarian,Eurasia,43.3646,25.047,bulg1262,bul,Bulgarian
 YUH,Cantonese,Eurasia,23.0118,113.2021,cant1236,,Cantonese
 CLN,Catalan,Eurasia,41.453,1.569,stan1289,cat,Catalan
-VMN,Chalcatongo Mixtec,,,,,,Chalcatongo Mixtec
+VMN,San Miguel Chalcatongo,North America,17.03226,-97.57074,sanm1296,,Chalcatongo Mixtec
 NCI,Classical Nahuatl,North America,19.72,-96.97,clas1250,nci,Classical Nahuatl
 ZOC,Copainalá Zoque,North America,17.2157,-93.3183,copa1236,zoc,Copainala Zoque
 DNS,Danish,Eurasia,54.8655,9.36284,dani1285,dan,Danish
@@ -18,11 +18,11 @@ DUT,Dutch,Eurasia,52.0,5.0,dutc1256,nld,Dutch
 ENG,English,Eurasia,53.0,-1.0,stan1293,eng,English
 FIN,Finnish,Eurasia,64.7628,25.5577,finn1318,fin,Finnish
 FRN,French,Eurasia,48.0,2.0,stan1290,fra,French
-GLI,Guliguli,Papunesia,-8.10266,157.564,guli1244,gli,Irish Gaelic
+GLI,Irish,Eurasia,53.2186,-7.61509,iris1253,gle,Irish Gaelic
 GER,German,Eurasia,48.649,12.4676,stan1295,deu,German
 GRK,Greek,,,,gree1276,,Greek
 GJR,Gujarati,Eurasia,22.687,71.0962,guja1252,guj,Gujarati
-HBR,Hebrew,,,,,,Hebrew
+HBR,Modern Hebrew,Eurasia,31.1056,35.0179,hebr1245,heb,Hebrew
 HND,Hindi,Eurasia,25.0,77.0,hind1269,hin,Hindi
 HNG,Hungarian,Eurasia,46.9068585714,19.6555271429,hung1274,hun,Hungarian
 ISL,Icelandic,Eurasia,63.4837,-19.0212,icel1247,isl,Icelandic
@@ -37,7 +37,7 @@ KKN,Korean,Eurasia,37.54,126.98,kore1280,kor,Korean
 KHQ,Koyra Chiini,Africa,,,koyr1241,,Koyra Chiini
 LTN,Latin,Eurasia,41.9026,12.4502,lati1261,lat,Latin
 LIT,Lithuanian,Eurasia,55.1429,23.9601,lith1251,lit,Lithuanian
-MEX,Malagasy,,,,,,Malagasy
+MEX,Plateau Malagasy,Africa,-19.5907,47.1211,plat1254,plt,Malagasy
 MJS,Malayalam,Eurasia,9.59208,76.7651,mala1464,mal,Malayalam
 MLS,Maltese,Eurasia,35.8884,14.4508,malt1254,mlt,Maltese
 CHN,Mandarin Chinese,Eurasia,40.0209,116.228,mand1415,cmn,Mandarin Chinese
@@ -52,7 +52,7 @@ PBI,Podoko,,,,podo1243,,Podoko
 PQL,Polish,Eurasia,51.8439,18.6255,poli1260,pol,Polish
 POR,Portuguese,Eurasia,39.91,-8.1,port1283,por,Portuguese
 PNJ,Pinjarup,Australia,-32.7,115.7,pinj1244,pnj,Punjabi
-PBA,Rapa Nui,,,,,,Rapa Nui
+PBA,Rapanui,Papunesia,-27.113,-109.342,rapa1244,rap,Rapa Nui
 RUM,Romanian,Eurasia,46.3913,24.2256,roma1327,ron,Romanian
 RUS,Russian,Eurasia,59.0,50.0,russ1263,rus,Russian
 SHD,Shona,Africa,-17.20849,29.75725,shon1251,sna,Shona
@@ -69,11 +69,11 @@ KHC,Tukang Besi,,,,tuka1247,,Tukang Besi
 TRK,Turkish,Eurasia,39.8667,32.8667,nucl1301,tur,Turkish
 TZO,Tzotzil,North America,16.6362,-92.7388,tzot1259,tzo,Tzotzil
 WOF,Wolof,Africa,15.2534,-15.383,nucl1347,wol,Wolof
-YDD,Yiddish,Eurasia,,,yidd1255,yid,Yiddish
+YDD,Eastern Yiddish,Eurasia,51.75,19.42,east2295,ydd,Yiddish
 YOR,Yoruba,Africa,7.15345,3.67225,yoru1245,yor,Yoruba
 LAT,Latvian,Eurasia,56.826108,24.309118,latv1249,lav,Latvian
 TCW,Telugu,Eurasia,16.4529,78.7024,telu1262,tel,Telugu
-GKO,Ancient Greek,Eurasia,39.8155,21.9129,anci1242,grc,Ancient Greek
+GKO,Ionic-Attic Ancient Greek,Eurasia,39.8155,21.9129,anci1242,grc,Ancient Greek
 TSZ,Tarascan,,,,tara1323,,Tarascan
 TOO,Totonac,,,,toto1252,,Totonac
 ZAW,Mitla Zapotec,North America,16.86849,-96.29434,mitl1236,zaw,Mitla Zapotec
@@ -85,7 +85,7 @@ SWA,Swahili,Africa,-8.25605,37.624,swah1253,swh,Swahili
 XOS,Xhosa,Africa,-31.0389,28.0769,xhos1239,xho,Xhosa
 PJT,Pitjantjatjara,Australia,-26.9704,131.357,pitj1243,pjt,Pitjantjatjara
 AMI,Amele,Papunesia,-5.29126,145.687,amel1241,aey,Amele
-SON,Koyraboro Senni,,,,,,Koyraboro Senni
+SON,Koyraboro Senni Songhai,Africa,16.9634,-0.55187,koyr1242,ses,Koyraboro Senni
 CJD,Chamorro,Papunesia,13.438011,144.74474,cham1312,cha,Chamorro
 GEO,Georgian,Eurasia,41.850397,43.78613,nucl1302,kat,Georgian
 LVK,Lavukaleve,Papunesia,-9.05569,159.119,lavu1241,lvk,Lavukaleve
@@ -99,4 +99,4 @@ DJK,Ndyuka,,,,suri1272,,Ndyuka
 TPY,Trumai,South America,-11.8119,-53.5717,trum1247,tpy,Trumai
 FRI,Frisian,,,,fris1239,,Frisian
 AFK,Afrikaans,Africa,-22.0,30.0,afri1274,afr,Afrikaans
-VLA,Flemish,,,,,,Flemish
+VLA,Western Flemish,Eurasia,51.0754,3.11345,vlaa1240,vls,Flemish
