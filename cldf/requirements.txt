@@ -3,7 +3,7 @@ Babel==2.11.0
 bs4==0.0.1
 certifi==2022.12.7
 cldfbench==1.13.0
--e git+https://github.com/cldf-datasets/gasttdir@9b7f626fa6066560861899e1ff14864c096025df#egg=cldfbench_gasttdir
+-e git+https://github.com/cldf-datasets/gasttdir@61ef9a4734e27ecafcd7588715c4ea60b8132fd9#egg=cldfbench_gasttdir
 cldfcatalog==1.5.1
 cldfzenodo==1.1.0
 clldutils==3.18.2
