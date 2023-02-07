@@ -5,6 +5,12 @@ import unicodedata
 from cldfbench import CLDFSpec, Dataset as BaseDataset
 
 
+def td_to_tab(cell):
+    cell = cell.replace('\t', '\\t')
+    cell = cell.replace('</td><td>', '\t')
+    return cell
+
+
 def html_cleanup(cell):
     cell = cell.strip()
     # TODO reenable html removal
@@ -14,11 +20,45 @@ def html_cleanup(cell):
     cell = re.sub('&nbsp;?', ' ', cell)
     # some remnant of a non-utf encoding???
     cell = re.sub('&#146;?', '’', cell)
+    cell = cell.replace('&Aring;', 'Å')
     cell = cell.replace('&auml;', 'ä')
+    cell = cell.replace('&ccedil;', 'ç')
+    cell = cell.replace('&ouml;', 'ö')
+    cell = cell.replace('&uuml;', 'ö')
     cell = re.sub(r'&#(\d+);?', lambda m: chr(int(m.group(1))), cell)
     # why not..
     cell = unicodedata.normalize('NFC', cell)
     return cell
+
+
+def make_example_row(langid_by_name, example):
+    language_name = example['language'].lower()
+    language_name = language_name.replace('nahuatlx', 'nahuatl')
+    language_name = language_name.replace('zapo´tec', 'zapotec')
+    language_name = language_name.replace('sewdish', 'swedish')
+
+    analysed_word = [
+        word for word in example['original'].split('\t')]
+    glosses = [
+        word for word in example['gloss'].split('\t')]
+
+    if example['comments'] != '--':
+        comment = example['comments']
+    else:
+        comment = ''
+
+    return {
+        'ID': example['Nr'],
+        'Language_ID': langid_by_name[language_name],
+        'Primary_Text': ' '.join(analysed_word),
+        'Analyzed_Word': analysed_word,
+        'Gloss': glosses,
+        'Translated_Text': example['translation'],
+        'Comment': comment,
+        'POV': example['pov'],
+        # TODO do sources properly
+        'Citation': example['source'],
+    }
 
 
 class Dataset(BaseDataset):
@@ -61,6 +101,19 @@ class Dataset(BaseDataset):
         language_table = self.etc_dir.read_csv('languages.csv', dicts=True)
         parameter_table = self.etc_dir.read_csv('parameters.csv', dicts=True)
 
+        example_table = self.raw_dir.read_csv('tdir.examples.csv', dicts=True)
+        example_table = [
+            {col: html_cleanup(td_to_tab(cell)) for col, cell in row.items()}
+            for row in example_table]
+
+        langid_by_name = {
+            row['Original_Name'].lower(): row['ID']
+            for row in language_table}
+        example_table = [
+            make_example_row(langid_by_name, example)
+            for example in example_table
+            if example['language'] != 'xxx']
+
         value_table = [
             {
                 'ID': '{}-{}'.format(value['sil'], param['ID']),
@@ -74,7 +127,12 @@ class Dataset(BaseDataset):
 
         args.writer.cldf.add_component('LanguageTable')
         args.writer.cldf.add_component('ParameterTable')
+        args.writer.cldf.add_component(
+            'ExampleTable',
+            'POV',
+            'Citation')
 
         args.writer.objects['LanguageTable'] = language_table
         args.writer.objects['ParameterTable'] = parameter_table
         args.writer.objects['ValueTable'] = value_table
+        args.writer.objects['ExampleTable'] = example_table
