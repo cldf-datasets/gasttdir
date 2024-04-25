@@ -1,13 +1,6 @@
-ID,Name,Description
-adn,adnominal intensifier,
-sort,sortal restrictions,
-lex,lexical source,
-otherint,other intensifier,
-ave,alternative,
-refl,reflexivizer,
-otherrefl,other reflexivizer,
-own,'own',
-sfp,'even',
-paradigms,paradigms,
-comments,comments,
-repr,representation,
+ID,Name,Comment_Col,Description
+ADN,Adnominal intensifier,Comments (adn_ints),"This parameter shows the most important adnominal self-intensifier in the language, including some information on how it is used grammatically."
+EXC,Exclusive intensifier,,This parameter shows the exclusive intensifier (as in 'I managed to do it myself').
+REFL,Reflexivizer,Comments (refl),This parameter gives the most important reflexive-marking element of the language.
+ATTR,Attributive intensifier (‘own’),,This parameter gives the form of the attributive intensifier (as in 'She brought her own cake.')
+SFP,Scalar focus particle (‘even’),,"This parameter gives the form of the scalar additive focus particle, corresponding to 'even'."

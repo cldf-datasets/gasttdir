@@ -3,6 +3,7 @@ import re
 import unicodedata
 
 from cldfbench import CLDFSpec, Dataset as BaseDataset
+from pybtex.database import parse_string
 
 
 def td_to_tab(cell):
@@ -106,6 +107,18 @@ class Dataset(BaseDataset):
             {col: html_cleanup(td_to_tab(cell)) for col, cell in row.items()}
             for row in example_table]
 
+        sources = parse_string(
+            self.raw_dir.read('tdir.references.bib'), 'bibtex')
+
+        language_sources = {
+            row['Glottocode']: [
+                trimmed
+                for source in row.get('Source', '').split(';')
+                if (trimmed := source.strip())]
+            for row in original_values}
+        for lg in language_table:
+            lg['Source'] = language_sources.get(lg['Glottocode']) or []
+
         langid_by_name = {
             row['Original_Name'].lower(): row['ID']
             for row in language_table}
@@ -114,25 +127,31 @@ class Dataset(BaseDataset):
             for example in example_table
             if example['language'] != 'xxx']
 
+        langid_by_glottocode = {
+            row['Glottocode']: row['ID'] for row in language_table}
         value_table = [
             {
-                'ID': '{}-{}'.format(value['sil'], param['ID']),
-                'Language_ID': value['sil'],
+                'ID': '{}-{}'.format(
+                    langid_by_glottocode[value['Glottocode']],
+                    param['ID']),
+                'Language_ID': langid_by_glottocode[value['Glottocode']],
                 'Parameter_ID': param['ID'],
                 'Value': value[param['ID']].strip(),
+                'Comment': value.get(param.get('Comment_Col')) or '',
             }
             for value in original_values
             for param in parameter_table
             if value.get(param['ID'], '').strip()]
 
-        args.writer.cldf.add_component('LanguageTable')
-        args.writer.cldf.add_component('ParameterTable')
         args.writer.cldf.add_component(
-            'ExampleTable',
-            'POV',
-            'Citation')
+            'LanguageTable',
+            'http://cldf.clld.org/v1.0/terms.rdf#source')
+        args.writer.cldf.add_component('ParameterTable')
+        args.writer.cldf.add_component('ExampleTable', 'POV', 'Citation')
 
         args.writer.objects['LanguageTable'] = language_table
         args.writer.objects['ParameterTable'] = parameter_table
         args.writer.objects['ValueTable'] = value_table
         args.writer.objects['ExampleTable'] = example_table
+
+        args.writer.cldf.add_sources(sources)
