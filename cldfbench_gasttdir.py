@@ -1,6 +1,8 @@
 import pathlib
 import re
+import sys
 import unicodedata
+from itertools import zip_longest
 
 from cldfbench import CLDFSpec, Dataset as BaseDataset
 from pybtex.database import parse_string
@@ -38,10 +40,8 @@ def make_example_row(langid_by_name, example):
     language_name = language_name.replace('zapo´tec', 'zapotec')
     language_name = language_name.replace('sewdish', 'swedish')
 
-    analysed_word = [
-        word for word in example['original'].split('\t')]
-    glosses = [
-        word for word in example['gloss'].split('\t')]
+    analysed_word = example['original'].split('\t')
+    glosses = example['gloss'].split('\t')
 
     if example['comments'] != '--':
         comment = example['comments']
@@ -60,6 +60,36 @@ def make_example_row(langid_by_name, example):
         # TODO do sources properly
         'Citation': example['source'],
     }
+
+
+def render_example(example):
+    words = example['Analyzed_Word']
+    glosses = example['Gloss']
+    id_width = len(example['ID'])
+    widths = [max(len(w), len(g)) for w, g in zip(words, glosses)]
+    padded_words = [
+        word.ljust(width)
+        for word, width in zip_longest(words, widths, fillvalue=0)]
+    padded_glosses = [
+        gloss.ljust(width)
+        for gloss, width in zip_longest(glosses, widths, fillvalue=0)]
+    return '({})  {}\n{}    {}'.format(
+        example['ID'],
+        '  '.join(padded_words).rstrip(),
+        ' ' * id_width,
+        '  '.join(padded_glosses).rstrip())
+
+
+def warn_about_glosses(example_table):
+    mismatched_examples = [
+        example
+        for example in example_table
+        if len(example['Analyzed_Word']) != len(example['Gloss'])]
+    if mismatched_examples:
+        print("ERROR: Misaligned glosses in examples:", file=sys.stderr)
+        for example in mismatched_examples:
+            print(file=sys.stderr)
+            print(render_example(example), file=sys.stderr)
 
 
 class Dataset(BaseDataset):
@@ -126,6 +156,7 @@ class Dataset(BaseDataset):
             make_example_row(langid_by_name, example)
             for example in example_table
             if example['language'] != 'xxx']
+        warn_about_glosses(example_table)
 
         langid_by_glottocode = {
             row['Glottocode']: row['ID'] for row in language_table}
