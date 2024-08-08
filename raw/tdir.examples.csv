@@ -361,8 +361,8 @@ Nr,language,pov,original,gloss,translation,source,page,comments
 314,Bambara,adv exclusive,Musa</td><td>y&#603&#768;r&#603;</td><td>nàna,Musa</td><td>INT</td><td>came.,Musa came personally.,"Ebermann, E. (1986). <i>Kleines Wörterbuch der Bambara-Sprache</i>. Wien: Universität Wien.",179,--
 315,Bambara,adnominal,Usman</td><td>y&#603&#768;r&#603;</td><td>yé</td><td>tobili</td><td>kè,Usman</td><td>INT</td><td>PST</td><td>food</td><td>make,Usman himself has cooked.,"Ebermann, E. (1986). <i>Kleines Wörterbuch der Bambara-Sprache</i>. Wien: Universität Wien.",215,--
 316,Amele,reflexive,ija</td><td>ija-dodoc</td><td>quga,I</td><td>I-REFL</td><td>hit,I hit myself.,John Roberts (p.c.),-,-
-317,Amele,adnominal,meme-g</td><td>uqa-dodoc</td><td>cal</td><td>men,father-POSS.3SG</td><td>he-INT</td><td>dead</td><td>become(remote</td><td>past),His father himself died.,John Roberts (p.c.),-,-
-318,Amele,reflexive,meme-g</td><td>uqa-dodoc</td><td>qon,father-POSS.3SG</td><td>he-REFL</td><td>hit(remote</td><td>past),His father hit himself.,John Roberts (p.c.),-,--
+317,Amele,adnominal,meme-g</td><td>uqa-dodoc</td><td>cal</td><td>men,father-POSS.3SG</td><td>he-INT</td><td>dead</td><td>become.REM.PST,His father himself died.,John Roberts (p.c.),-,-
+318,Amele,reflexive,meme-g</td><td>uqa-dodoc</td><td>qon,father-POSS.3SG</td><td>he-REFL</td><td>hit.REM.PST),His father hit himself.,John Roberts (p.c.),-,--
 319,Amele,adnominal,jo</td><td>uqa-dodoc,house</td><td>it-INT,the house itself,John Roberts (p.c.),-,--
 320,Fulani,reflexive,mi</td><td>nawnii</td><td>hoore</td><td>am,I</td><td>injured</td><td>REFL</td><td>my,I injured myself.,"Jungraithmayr, H. & A. Al-Amin (1989). <i>Einführung in die Ful-Sprache</i>. Berlin: Dietrich Reimer.",163,---
 321,Fulani,adv exclusive,mi</td><td>warii</td><td>bee</td><td>hoore</td><td>am,I</td><td>came</td><td>[with</td><td>head</td><td>my]=INT,I came myself,"Jungraithmayr, H. & A. Al-Amin (1989). <i>Einführung in die Ful-Sprache</i>. Berlin: Dietrich Reimer.",163,strategy of adverbial intensification similar to that of Arabic and Hebrew
