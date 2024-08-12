@@ -5,7 +5,7 @@ bibtexparser==2.0.0b7
 bs4==0.0.2
 certifi==2024.6.2
 cldfbench==1.14.0
--e git+https://github.com/cldf-datasets/gasttdir@4ca75db70327c3bfc2812821849a3b9d3b836f72#egg=cldfbench_gasttdir
+-e git+https://github.com/cldf-datasets/gasttdir@597be522b6005d2a1b333165ba8338ca8f261dd2#egg=cldfbench_gasttdir
 cldfcatalog==1.5.1
 cldfzenodo==2.1.1
 clldutils==3.22.2
