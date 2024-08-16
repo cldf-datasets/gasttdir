@@ -16,10 +16,9 @@ def td_to_tab(cell):
 
 def html_cleanup(cell):
     cell = cell.strip()
-    # TODO reenable html removal
-    #cell = re.sub('<[^<>]*>', '', cell)
-    #cell = cell.replace('&lt;', '<')
-    #cell = cell.replace('&gt;', '>')
+    cell = re.sub('<[^<>]*>', '', cell)
+    cell = cell.replace('&lt;', '<')
+    cell = cell.replace('&gt;', '>')
     cell = re.sub('&nbsp;?', ' ', cell)
     # some remnant of a non-utf encoding???
     cell = re.sub('&#146;?', '’', cell)
