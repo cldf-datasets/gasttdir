@@ -1,0 +1,50 @@
+{
+    "creators": [
+        {
+            "name": "Volker Gast"
+        },
+        {
+            "name": "Daniel Hole"
+        },
+        {
+            "name": "Ekkehard K\u00f6nig"
+        },
+        {
+            "name": "Peter Siemund"
+        },
+        {
+            "name": "Stephan T\u00f6pper"
+        }
+    ],
+    "contributors": [
+        {
+            "name": "Johannes Englisch",
+            "type": "Other"
+        },
+        {
+            "name": "Martin Haspelmath",
+            "type": "Other"
+        }
+    ],
+    "title": "Typological Database of Intensifiers and Reflexives",
+    "access_right": "open",
+    "keywords": [
+        "cldf:StructureDataset",
+        "linguistics"
+    ],
+    "upload_type": "dataset",
+    "license": {
+        "id": "CC-BY-4.0"
+    },
+    "communities": [
+        {
+            "identifier": "cldf-datasets"
+        },
+        {
+            "identifier": "clld"
+        },
+        {
+            "identifier": "crossgram"
+        }
+    ]
+}
