@@ -6,6 +6,7 @@
         }
     ],
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#StructureDataset",
+    "dc:identifier": "https://crossgram.clld.org/contributions/gasttdir",
     "dc:license": "https://creativecommons.org/licenses/by/4.0/",
     "dc:source": "sources.bib",
     "dc:title": "Typological Database of Intensifiers and Reflexives",
@@ -14,7 +15,7 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/gasttdir",
             "rdf:type": "prov:Entity",
-            "dc:created": "7effb0e",
+            "dc:created": "c84ed5f",
             "dc:title": "Repository"
         },
         {
