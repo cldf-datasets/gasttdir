@@ -1,5 +1,7 @@
 # Typological Database of Intensifiers and Reflexives
 
+[![CLDF validation](https://github.com/cldf-datasets/gasttdir/workflows/CLDF-validation/badge.svg)](https://github.com/cldf-datasets/gasttdir/actions?query=workflow%3ACLDF-validation)
+
 ## How to cite
 
 If you use these data please cite
