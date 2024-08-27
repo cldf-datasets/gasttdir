@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cldfbench_gasttdir"
+dependencies = ["cldfbench[glottolog,excel]"]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = ["pytest-cldf"]
+
+[project.entry-points."cldfbench.dataset"]
+gasttdir = "cldfbench_gasttdir:Dataset"
+
+[tool.setuptools]
+py-modules = ["cldfbench_gasttdir"]
+include-package-data = true
+
+[tool.pytest.ini_options]
+testpaths = ["test.py"]
+addopts = "--cldf-metadata=cldf/cldf-metadata.json"
