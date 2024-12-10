@@ -130,6 +130,8 @@ class Dataset(BaseDataset):
 
         language_table = self.etc_dir.read_csv('languages.csv', dicts=True)
         parameter_table = self.etc_dir.read_csv('parameters.csv', dicts=True)
+        for parameter in parameter_table:
+            parameter['Grammacodes'] = re.split(r'\s*,\s*', parameter.get('Grammacodes', ''))
 
         example_table = self.raw_dir.read_csv('tdir.examples.csv', dicts=True)
         example_table = [
@@ -176,7 +178,14 @@ class Dataset(BaseDataset):
         args.writer.cldf.add_component(
             'LanguageTable',
             'http://cldf.clld.org/v1.0/terms.rdf#source')
-        args.writer.cldf.add_component('ParameterTable')
+        args.writer.cldf.add_component(
+            'ParameterTable',
+            {
+                'name': 'Grammacodes',
+                'datatype': 'string',
+                'separator': ';',
+                'dc:extent': 'multivalued',
+            })
         args.writer.cldf.add_component('ExampleTable', 'POV', 'Citation')
 
         args.writer.objects['LanguageTable'] = language_table
